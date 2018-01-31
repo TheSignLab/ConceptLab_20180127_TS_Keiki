@@ -10,7 +10,7 @@ var glfx_w,
 var ctx;
 
 var glfx_canvas2,
-    glfx_texture2,|
+    glfx_texture2,
     glfx_videoraw2,
     glfx_interval2,
     glfx_paused2;

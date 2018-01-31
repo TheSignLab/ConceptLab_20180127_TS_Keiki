@@ -41,7 +41,6 @@
             js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=1652686784778758';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-
     </script>
 
     <nav>
@@ -134,10 +133,12 @@
 
         <div class="ui-layer" id="outLayer" style="display: none">
             <img id="imgTarget">
-<form id="myAwesomeForm" method="post" action="/php-code-that-handles-fileupload.php">
-    <input type="text" id="filename" name="filename" /> <!-- Filename -->
-    <input type="submit" id="submitButton" name="submitButton" /> <!-- Submit -->
-</form>
+            <form id="myAwesomeForm" method="post" action="/php-code-that-handles-fileupload.php">
+                <input type="text" id="filename" name="filename" />
+                <!-- Filename -->
+                <input type="submit" id="submitButton" name="submitButton" />
+                <!-- Submit -->
+            </form>
 
         </div>
 
@@ -147,9 +148,6 @@
     </main>
 
 
-    <div id="outLayerFinal" style="display: none">
-        <canvas id="newCanvas"></canvas>
-    </div>
 
     <footer>
 
@@ -190,7 +188,6 @@
                         .fb-share-button {
                             visibility: hidden;
                         }
-
                     </style>
                     <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div>
                 </div>
