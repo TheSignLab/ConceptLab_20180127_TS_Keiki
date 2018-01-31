@@ -1,0 +1,211 @@
+.ui-default-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #EFEFF4;
+}
+
+
+.ui-effects-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #EFEFF4;
+}
+
+
+
+.ui-snapped-buttons {
+display: block;
+    height: 100px;
+    background-color: #EFEFF4;
+}
+
+.ui-sharing-buttons {
+    display: block;
+    height: 100px;
+    background-color: #EFEFF4;
+}
+
+.row-up {
+    height: 30px;
+    background-color: #59FFCE;
+    font-family: font-regular;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-up span {
+    text-align: center;
+
+}
+
+.row-down {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-content {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-content img {
+    padding: 10px;
+    width: 30px;
+}
+.row-content .separator {
+    width: 1px;
+    height: 30px;
+    margin: 10px;
+    background-color: black;
+    
+}
+.button {
+    width: 33%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.351s ease-in-out;
+    -moz-transition: all 0.351s ease-in-out;
+    -o-transition: all 0.351s ease-in-out;
+    transition: all 0.351s ease-in-out;
+}
+
+.button img {
+    width: 60px;
+}
+
+
+
+/* ------------------------------- */
+
+/* ------- ui Snapped ------------ */
+
+/* ------------------------------- */
+
+.ui-snapped-buttons .button {
+    height: 100px;
+    background-color: #EFEFF4;
+}
+
+.ui-snapped-buttons .button.right {
+    width: 50vw;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.ui-snapped-buttons .button.right .txt {
+    width: 150px;
+    width: 150px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #59FFCE;
+}
+
+.ui-snapped-buttons .button.left {
+    width: 75px;
+    float: left;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ui-snapped-buttons .button.left:first-child {
+    margin-left: 20px;
+}
+
+.ui-snapped-buttons .button.right img {
+    width: 80px;
+    position: relative;
+    top: 10px
+}
+
+.ui-snapped-buttons .button.left img {
+    width: 80px;
+    position: relative;
+    top: 10px
+}
+
+.ui-snapped-buttons .button.left img {}
+
+/* ------------------------------- */
+
+/* ------- \ui Snapped ----------- */
+
+/* ------------------------------- */
+.ui-seemore-buttons{
+    height: 100px;
+    text-align: center;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #EFEFF4;
+}
+.ui-seemore-buttons .email{
+  font-size: 20pt;
+}
+
+.ui-seemore-buttons .address{
+  font-size: 10pt;
+}
+.ui-seemore-buttons .city{
+  font-size: 10pt;
+}
+.ui-btn-nav-dots {
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    z-index: 2000;
+}
+
+.ui-btn-nav-close {
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    z-index: 2000;
+}
+
+
+
+.button.fx1{
+    font-family: font-regular;
+    position: relative;
+    top:-5px;
+}
+.button.fx2{
+    font-family: font-regular;
+    position: relative;
+    top:-5px;
+}
+.button.fx3{
+    font-family: font-regular;
+    position: relative;
+    top:-5px;
+}
+.button.fx4{
+    font-family: font-regular;
+    position: relative;
+    top:-5px;
+}
