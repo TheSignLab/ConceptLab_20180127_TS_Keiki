@@ -18,10 +18,10 @@ var onFailSoHard = function (e) {
     console.log('Reeeejected!', e);
     videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
     videoElement.load();
-    videoElement.addEventListener('loadeddata', function() {
-   videoElement.play();
-           
-}, false);
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
 };
 
 if (navigator.getUserMedia) {
@@ -29,10 +29,20 @@ if (navigator.getUserMedia) {
         video: true
     }, function (stream) {
         videoElement.src = stream;
+         videoElement.load();
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
     }, onFailSoHard);
 } else if (navigator.webkitGetUserMedia) {
     navigator.webkitGetUserMedia('video', function (stream) {
         videoElement.src = window.webkitURL.createObjectURL(stream);
+         videoElement.load();
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
     }, onFailSoHard);
 } else {
     videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
@@ -41,13 +51,30 @@ if (navigator.getUserMedia) {
 
 
 // ---------------------------- //
-function video2canvas(){
+function video2canvas() {
     var tsVideo = document.querySelector('video');
     var tsCanvas = document.getElementById('cnOut');
     var tsContext = tsCanvas.getContext('2d');
-    
 
-    tsContext.drawImage(tsVideo, 0, 0, 100, 100);
+    var tsVideo = document.querySelector('video');
+    var tsCanvas = document.getElementById('cnOut');
+    var tsContext = tsCanvas.getContext('2d');
+
+    var vw = $("views").width();
+    var vh = $("views").height();
+
+    var vidW = $("video").width();
+    var vidH = $("video").height();
+    var vidProp = vidW / vidH;
+    var vProp = vw / vh;
+
+    $(tsCanvas).width(vw);
+    $(tsCanvas).height(vw / vidProp);
+
+    setInterval(function () {
+        tsContext.drawImage(tsVideo, 0, 0, vw, vw / vidProp);
+    }, 0);
+
 }
 /*
 
