@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+
+.effect-titles {
+
+    font-family: 'Montserrat', sans-serif;
+    background-color: #EFEFF4;
+
+}
+
+.effect-title {
+    font-size: 14pt;
+    width: 100vw;
+    display: inline-block;
+    text-align: center;
+
+}
+
+
+.effect-title span {
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.effect-title-txt {
+    text-align: center !important;
+    width: 100% !important;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}

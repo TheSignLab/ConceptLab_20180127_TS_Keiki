@@ -1,0 +1,342 @@
+/* ---------------------- */
+/*      VIEW :: FORM      */
+/* ---------------------- */
+.vw-form {
+    
+    background-color: black;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    display: flex;
+    display: none; /*comment*/
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/* -- Container -- */
+.vw-form container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    margin: 0 auto;
+
+    color: white;
+    font-family: font-light;
+    font-size: 15px;
+
+}
+
+
+/* -- Container h1,h2 -- */
+.vw-form h1 {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    ;
+}
+.vw-form h2 {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: font-light;
+    font-weight: 100;
+    text-align: center;
+}
+
+/* -- Container social ul/li -- */
+.vw-form ul{
+     list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+     width: auto;
+    text-align: center;
+}
+.vw-form ul li {
+    display: inline-block;
+    margin: 0 auto;
+   
+}
+.vw-form ul li h1{
+    font-size:20px;
+    color: #59FFCE;;
+    margin: 0px;
+    padding: 0px;
+    width: 10px;
+    position: relative;
+    top: -5px;
+    left: 3px;
+    
+}
+.vw-form ul li img{
+    filter: invert(100%);
+    width: 20px;
+}
+
+
+/* -- Form-- */
+.vw-form form {
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+    height: auto;
+    background-color: white;
+    color: black;
+}
+
+.vw-form .form-group {
+    display: block;
+
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 10px 0px 10px 0px;
+
+}
+
+.vw-form form input[type=text] {
+    width: calc(100%-20px);
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    float: right;
+    border: none;
+    border-bottom: 1px solid black;
+    color: #999;
+    height: 10px
+}
+
+
+.vw-form form input[type=submit] {
+    width: 100px;
+    height: 30px;
+    margin: 0px 60px 0px 55px;
+    
+    position: relative;
+    top: 10px;
+    
+      border: 1px solid #59FFCE;
+    background-color: #59FFCE;
+    
+    font-family: font-bold;
+    
+    text-transform: lowercase;
+    font-size: 20px;
+
+}
+
+
+.form-group:last-child {
+    height: 5px;
+}
+
+.vw-form .name {
+    display: inline-block;
+    float: right;
+    width: 180px;
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: font-regular;
+
+
+}
+
+.vw-form .number {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 40px;
+    display: inline-block;
+
+}
+
+
+.number span {
+    font-family: font-regular;
+    font-size: 15px;
+    position: relative;
+    top: 0px;
+    left: 6.5px;
+}
+
+.number.n1 span {
+    left: 7.5px;
+}
+
+.number.n2span {
+    left: 7.5px;
+}
+
+
+
+
+
+
+
+
+
+.seemore-container {
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.seemore-container .title {
+    font-size: 20pt;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.seemore-container .subtitle {
+    font-size: 17pt;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.seemore-container .subtitle span:nth-child(1) {
+    position: relative;
+    left: 10px;
+}
+
+.seemore-container .subtitle span:nth-child(2) {
+    position: relative;
+    left: 5px;
+}
+
+.seemore-container .subtitle span:nth-child(2) {
+    position: relative;
+    left: 5px;
+}
+
+
+.seemore-container .wbox {
+    font-size: 20pt;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+
+}
+
+
+.seemore-container .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(100%);
+}
+
+.seemore-container .social img {
+    padding: 10px;
+    width: 30px;
+}
+
+.seemore-container .social .separator {
+    background-color: #610031;
+    width: 2px;
+    height: 30px;
+    margin: 10px;
+    margin-right: 0px;
+
+}
+
+.wbox-active {
+    border: 1px solid #59FFCE;
+    background-color: #59FFCE;
+
+}
+
+.wbox-submit {
+    border-color: #59FFCE;
+    background-color: #59FFCE;
+    width: 60px;
+    height: 30px;
+    font-size: 16pt;
+    padding: 2px 12px 2px 12px;
+    position: relative;
+    top: 40px;
+}
+
+.wbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.wbox-row {
+    width: 220px;
+}
+
+.wbox-row:first-child {
+    padding-bottom: 30px;
+}
+
+.wbox-row-c1 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+
+}
+
+.wbox-row-c1 span.cx1 {
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: 12px;
+}
+
+.wbox-row-c1 span.cx2 {
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: 10px;
+}
+
+
+.wbox-row-c2 {
+    width: 175px;
+    height: 35px;
+    display: inline-block;
+    font-size: 10px;
+
+}
+
+.wbox-row-c2 .wbox-row-c2-label {
+    font-family: font-regular;
+    font-size: 15px;
+}
+
+
+.wbox-row-c2 .wbox-row-c2-value {
+    font-family: font-black;
+    font-size: 15px;
+}
+
+.wbox-row-c2 .wbox-row-c2-value input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.wbox-row-c2 .wbox-row-c2-value input:focus {
+    outline: none;
+}

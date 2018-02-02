@@ -1,240 +1,155 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  INIT HEAD --------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description" content="TheSignLab Launch">
-    <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
-    <meta itemprop="description" content="TheSignLab Co Launch">
-    <meta itemprop="image" content="images/thesignlabco-icon-192x192.png">
-    <meta itemprop="name" content="TheSignLab Co Launch App">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta id="theme-color" name="theme-color" content="#ffffff">
-    <base target="_blank">
-    <title>TheSignLab Launch App</title>
-    <link rel="icon" sizes="192x192" href="images/thesignlabco-icon-192x192.png">
+    <!-- --------------  HTML Head Meta Tag  ----------------------------------------->
+    <!-- General Tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Jorge Luis Mayorga Taborda">
+    <meta name="description" content="TheSignLab es un estudio de diseño multidisciplinario con sede en Bogotá, compuesto por el talento más nuevo en diseño e ingeniería. Al aplicar una metodología Agile para el diseño, ofrecemos soluciones creativas únicas cuando se requiere un resultado comercial fresco y holístico. En pocas palabras: TheSignLab no solo crea marcas, estrategias de marketing sino soluciones de alta tecnología que resuenan en la audiencia actual.">
+    <meta name="keywords" content="Diseño,diseño de paginas web,desarrollo web,inovación,brand identity,publicidad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- General Tags -->
 
-    <link rel="stylesheet" href="css/layouts.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/effects.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <!--
-   
-    <link rel="stylesheet" href="css/effects.css">
-    <link rel="stylesheet" href="css/modals.css">
-    -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- OpenGraph:: Facebook -->
+    <meta property="og:url" content="http://thesignlab.co/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="TheSignLab Brochure" />
+    <meta property="og:description" content="TheSignLab es un estudio de diseño multidisciplinario con sede en Bogotá, compuesto por el talento más nuevo en diseño e ingeniería. Al aplicar una metodología centrada en el usuario para el diseño, ofrecemos soluciones creativas únicas cuando se requiere un resultado comercial fresco y holístico. En pocas palabras: TheSignLab no solo crea marcas, estrategias de marketing sino soluciones de alta tecnología que resuenan en la audiencia actual." />
+    <meta property="og:image" content="http://brochure.thesignlab.co/og_img.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="910" />
+    <meta property="og:image:height" content="910" />
+    <meta property="og:image:alt" content="TheSignLab Creative Lab Cover" />
+    <!-- OpenGraph:: Facebook -->
+
+    <!-- Card:: Twitter -->
+    <meta name="twitter:card" content="http://brochure.thesignlab.co/og_img.jpg">
+    <meta name="twitter:site" content="@thesignlabco">
+    <meta name="twitter:creator" content="@thesignlabco">
+    <meta name="twitter:title" content="TheSignLab Brochure">
+    <meta name="twitter:description" content="TheSignLab es un estudio de diseño multidisciplinario con sede en Bogotá, compuesto por el talento más nuevo en diseño e ingeniería. Al aplicar una metodología centrada en el usuario para el diseño, ofrecemos soluciones creativas únicas cuando se requiere un resultado comercial fresco y holístico. En pocas palabras: TheSignLab no solo crea marcas, estrategias de marketing sino soluciones de alta tecnología que resuenan en la audiencia actual.">
+    <meta name="twitter:image" content="http://brochure.thesignlab.co/og_img.jpg">
+    <!-- Card:: Twitter -->
+
+    <!-- --------------  HTML Head Context Tag   ----------------->
+    <title>TheSignLab App</title>
+    <!-- --------------  HTML Head Context Tag   ----------------->
+
+    <!-- --------------  HTML Head Icon Tag      ----------------->
+
+    <!-- --------------  HTML Head Icon Tag      ----------------->
+    <!-- --------------  HTML Head Meta Tag  ------------------------------------------>
+
 </head>
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  END HEAD ---------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 
 
+
+
+
+
+
+
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  INIT BODY --------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 
 <body>
 
-
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=1652686784778758';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <loader></loader>
 
     <nav>
-        <img class="ui-btn-nav-dots" src="images/nav-dots.png">
-        <img class="ui-btn-nav-close" src="images/nav-close.png">
+        <img src="img/nav-dots.png" class="btn-left"><img src="img/nav-close.png" class="btn-right">
     </nav>
 
+    <views>
 
+        <view class="vw-live view-on-top">
+            
+            <canvas id="cnOut"></canvas>
+            <video></video>
+        </view>
 
-    <main>
-
-        <div class="ui-layer raw-video">
-            <video autoplay nocontrols muted height="100%">
-             <source src="example_video2.mp4" type="video/mp4">
-             Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="ui-layer back-video" style="display: none;">
-            <video autoplay nocontrols muted height="100%">
-             <source src="example_video2.mp4" type="video/mp4">
-             Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="ui-layer front-video" style="display: none;">
-            <video autoplay nocontrols muted height="100%">
-             <source src="example_video.mp4" type="video/mp4">
-             Your browser does not support the video tag.
-            </video>
-        </div>
-
-
-        <div class="ui-layer back-canvas"></div>
-        <div class="ui-layer front-canvas"></div>
-
-
-        <div class="ui-layer seemore">
-            <div class="seemore-container">
-                <div class="title">
-                    <span class="f-light">Si todo</span>
-                    <span class="f-bold">comienza</span>
-                    <span class="f-light">con una idea,</span>
-                </div>
-
-                <div class="wbox">
-
-                    <div class="wbox-row">
-                        <div class="wbox-row-c1 wbox-active">
-                            <span class="f-bold cx1">1</span>
-                        </div>
-                        <div class="wbox-row-c2">
-
-                            <div class="wbox-row-c2-label"> <span>INGRESA TU NOMBRE</span></div>
-                            <div class="wbox-row-c2-value"> <input type="text" placeholder="Lorem Ipsum" id="id_input_name"></div>
-
-                        </div>
+        <view class="vw-form">
+            <container>
+                <h1>si todo <span class="f-bold">comienza</span> con una idea,</h1>
+                <form>
+                    <div class="form-group">
+                        <div class="number n1"><span>1</span></div>
+                        <div class="name"><span>INGRESA TU NOMBRE</span></div>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <div class="number n2"><span>2</span></div>
+                        <div class="name"><span>INGRESA TU CORREO</span></div>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit">
                     </div>
 
-                    <div class="wbox-row">
-                        <div class="wbox-row-c1">
-                            <span class="f-bold cx2">2</span>
-                        </div>
-                        <div class="wbox-row-c2">
+                </form>
+                <h2>#we<span class="f-bold">sign</span>ourworld</h2>
+                <ul>
+                    <li> <img src="img/btn-sharing-instagram_inv.png"> </li>
+                    <li>
+                        <h1>|</h1>
+                    </li>
+                    <li><img src="img/btn-sharing-facebook_inv.png"> </li>
+                </ul>
+            </container>
+        </view>
+        <view class="vw-legal"></view>
+    </views>
 
-                            <div class="wbox-row-c2-label"> <span>INGRESA TU CORREO</span></div>
-                            <div class="wbox-row-c2-value"> <input type="text" placeholder="Lorem Ipsum" id="id_input_email"> </div>
+    <footer></footer>
 
-                        </div>
-                    </div>
-
-                    <div class="wbox-submit">
-                        <span class="f-bold">Enviar</span>
-                    </div>
-
-                </div>
-
-                <div class="subtitle">
-                    <span class="f-light">#we</span>
-                    <span class="f-bold">sign</span>
-                    <span class="f-light">ourworld</span>
-                </div>
-
-                <div class="social">
-                    <a href="https://www.facebook.com/ThesignSAS/"><img src="images/btn-sharing-instagram_inv.png"></a>
-                    <div class="separator"></div>
-                    <a href="https://www.facebook.com/ThesignSAS/"> <img src="images/btn-sharing-facebook.png"></a>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="ui-layer" id="outLayer" style="display: none">
-            <img id="imgTarget">
-            <form id="myAwesomeForm" method="post" action="/php-code-that-handles-fileupload.php">
-                <input type="text" id="filename" name="filename" />
-                <!-- Filename -->
-                <input type="submit" id="submitButton" name="submitButton" />
-                <!-- Submit -->
-            </form>
-
-        </div>
-
-
-
-
-    </main>
-
-
-
-    <footer>
-
-
-
-        <div class="ui-default-buttons">
-            <div class="button select-effect"><img src="images/btn-effects.png"></div>
-            <div class="button take-snap"><img src="images/btn-snap.png"></div>
-            <div class="button button-share"><img src="images/btn-swcam.png"></div>
-        </div>
-
-        <div class="ui-effects-buttons">
-            <div class="button fx1"><img src="images/btn-fx1.png"><span>Filtro 1</span></div>
-            <div class="button fx2"><img src="images/btn-fx2.png"><span>Filtro 2</span></div>
-            <div class="button fx3"><img src="images/btn-fx3.png"><span>Filtro 3</span></div>
-            <div class="button fx4"><img src="images/btn-fx4.png"><span>Filtro 4</span></div>
-        </div>
-
-        <div class="ui-snapped-buttons">
-            <div class="button left" id="id_share_btn"><img src="images/btn-snap-share.png"><span class="f-light">Compartir</span></div>
-
-            <div class="button left"><img src="images/btn-snap-download.png"><span class="f-light">Guardar</span> <a id="link" style="display: none"></a></div>
-            <div class="button right">
-                <div class="txt">
-                    <span class="f-light">Quiero </span><span class="f-bold"> saber más</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui-sharing-buttons">
-            <div class="row-up"><span>Compartir</span></div>
-            <div class="row-down">
-                <div class="row-content">
-                    <img src="images/btn-sharing-instagram.png">
-                    <div class="separator"></div>
-                    <img src="images/btn-sharing-facebook.png" id="id_btn_share_fb">
-                    <style>
-                        .fb-share-button {
-                            visibility: hidden;
-                        }
-                    </style>
-                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="ui-seemore-buttons">
-            <div class="email">
-                <span class="f-bold">hello</span>
-                <span class="f-light">@thesignlab.co</span>
-            </div>
-            <div class="address">
-                <span class="f-light">8057100 | Calle 123 #7 - 51 Of. 207</span>
-            </div>
-            <div class="city">
-                <span class="f-light">Kaiwa Building</span>
-                <span class="f-bold"> Bogotá,Colombia</span>
-            </div>
-        </div>
-
-    </footer>
-
-
-    <script type="text/javascript" src="js/simple-jQuery-slider-master/dist/package/jquery.simpleslider.package.min.js"></script>
-    <script type="text/javascript" src="js/canvasmask.js"></script>
-    <script type="text/javascript" src="js/FileSaver.js"></script>
-    <script type="text/javascript" src="js/cropbox.js"></script>
-
-    <script src="js/fb_api.js"></script>
-    <script src="http://evanw.github.com/glfx.js/glfx.js"></script>
-    <script src="js/jquery.slides.min.js"></script>
-    <script src="js/html2canvas.min.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/ui_ux.js"></script>
-    <script src="js/main.js"></script>
-    <!--
-    <script src="js/main.js"></script>
-    <script src="js/fb_api.js"></script>
-    <script src="js/ajax_api.js"></script>
-    <script src="js/ui_ux.js"></script>
-    <script src="js/video_handler.js"></script>
-    <script src="js/effects.js"></script>
-  -->
-
-
+    <backend>
+        
+        
+        <canvas id="cnIn"></canvas>
+        <canvas id="cnFx1"></canvas>
+        <canvas id="cnFx2"></canvas>
+        <canvas id="cnFX2Masked"></canvas>
+        <canvas id="cnMerged"></canvas>
+    </backend>
 
 </body>
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  END BODY ---------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 
+
+
+
+
+
+
+
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  INIT COMP --------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<link rel="stylesheet" href="css/stylesheet_fonts.css">
+<link rel="stylesheet" href="css/stylesheet_layout.css">
+<link rel="stylesheet" href="css/stylesheet_vw_form.css">
+<link rel="stylesheet" href="css/stylesheet_nav.css">
+<link rel="stylesheet" href="css/stylesheet_footer.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/js_io_video.js"></script>
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+<!--  END COMP ---------------------------------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 </html>

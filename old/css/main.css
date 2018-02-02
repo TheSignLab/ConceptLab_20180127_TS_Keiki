@@ -1,0 +1,259 @@
+/* -------------------------------------------------
+		Stylesheet : main.css
+	    Author: Jorge Luis Mayorga
+		Update : 03/01/18
+	------------------------------------------------- */
+
+
+
+
+
+
+
+/* ---------------  Fuentes ---------------- */
+
+@font-face {
+	font-family: font-thin;
+	src: url("font-thin.otf") format("opentype");
+}
+@font-face {
+	font-family: font-regular;
+	src: url("font-regular.otf") format("opentype");
+}
+@font-face {
+	font-family: font-med;
+	src: url("font-med.otf") format("opentype");
+}
+@font-face {
+	font-family: font-light;
+	src: url("font-light.ttf") format("opentype");
+}
+@font-face {
+	font-family: font-bold;
+	src: url("font-bold.otf") format("opentype");
+}
+@font-face {
+	font-family: font-black;
+	src: url("font-black.otf") format("opentype");
+}
+
+.f-light {
+	font-family: font-light;
+}
+.f-bold {
+	font-family: font-bold;
+}
+
+/* --------------- /Fuentes ---------------- */
+
+
+
+
+
+
+
+
+/* -----------  BackgroundColor ----------- */
+
+.bg-white {
+	background-color: white
+}
+.bg-black {
+	background-color: black
+}
+
+/* ----------- /BackgroundColor ----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+.ts-bg-c1 {
+	background-color: #59FFCE;
+}
+
+.ts-bg-c2 {
+	background-color: #69E3FF;
+}
+
+.ts-bg-c3 {
+	background-color: #E6F964;
+}
+
+.ts-bg-c4 {
+	background-color: #FF595D;
+}
+
+.ts-bg-c5 {
+	background-color: #FF5FAF;
+}
+
+.ts-bg-c5 {
+	background-color: #CE64FF;
+}
+
+.ts-fc-c1 {
+	color: #59FFCE;
+}
+
+.ts-fc-c2 {
+	color: #69E3FF;
+}
+
+.ts-fc-c3 {
+	color: #E6F964;
+}
+
+.ts-fc-c4 {
+	color: #FF595D;
+}
+
+.ts-fc-c5 {
+	color: #FF5FAF;
+}
+
+.ts-fc-c5 {
+	bcolor: #CE64FF;
+}
+
+
+.ts-hv-c1 {
+	background-color: none;
+	cursor: pointer;
+}
+
+.ts-hv-c1:hover {
+	background-color: #59FFCE;
+}
+
+.ts-hv-c2 {
+	background-color: none;
+	cursor: pointer
+}
+
+.ts-hv-c2:hover {
+	background-color: #69E3FF;
+}
+
+.ts-hv-c3 {
+	background-color: none;
+	cursor: pointer
+}
+
+.ts-hv-c3:hover {
+	background-color: #E6F964;
+}
+
+.ts-hv-c4 {
+	background-color: none;
+	cursor: pointer
+}
+
+.ts-hv-c4:hover {
+	background-color: #FF595D;
+}
+
+.ts-hv-c5 {
+	background-color: none;
+	cursor: pointer
+}
+
+.ts-hv-c5:hover {
+	background-color: #FF5FAF;
+}
+
+.ts-hv-c6 {
+	background-color: none;
+	cursor: pointer;
+}
+
+.ts-hv-c6:hover {
+	background-color: #CE64FF;
+}
+
+
+
+.ts-hv-fc-c1 {
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-ms-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+.ts-hv-fc-c1:hover {
+	cursor: pointer;
+	color: #59FFCE;
+}
+
+.ts-hv-fc-c2 {
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-ms-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+.ts-hv-fc-c2:hover {
+	cursor: pointer;
+	color: #69E3FF;
+}
+
+.ts-hv-fc-c3 {
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-ms-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+.ts-hv-fc-c3:hover {
+	cursor: pointer;
+	color: #E6F964;
+}
+
+.ts-hv-fc-c4 {
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-ms-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+.ts-hv-fc-c4:hover {
+	cursor: pointer;
+	color: #FF595D;
+}
+
+.ts-hv-fc-c5 {
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-ms-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+.ts-hv-fc-c5:hover {
+	cursor: pointer;
+	color: #FF5FAF;
+}
+
+.ts-hv-fc-c6 {
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-ms-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+}
+
+.ts-hv-fc-c6:hover {
+	cursor: pointer;
+	color: #CE64FF;
+}

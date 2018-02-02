@@ -1,0 +1,80 @@
+/* -------------------------------------------------
+		Stylesheet : Fonts.css
+	    Author: Jorge Luis Mayorga
+		Update : 03/01/18
+	------------------------------------------------- */
+
+/* --------------------------------------------------------- */
+/* FUNDAMENTALS
+/* --------------------------------------------------------- */
+
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #dcdcdc;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+loader {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: none;
+}
+backend{
+    display: none;
+}
+video{
+    height: 100%;
+        transform: translateX(-50%);
+}
+/* --------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------- */
+/* VIEWS
+/* --------------------------------------------------------- */
+views {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    display: block;
+    overflow: hidden;
+}
+
+view {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+     width: 100vw;
+    height: calc(100vh - 100px);
+}
+
+.view-on-top {
+    z-index: 10;
+    display: inherit;
+}
+
+/* --------------------------------------------------------- */
+

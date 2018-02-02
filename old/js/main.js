@@ -1,0 +1,2 @@
+var regState = 0;
+

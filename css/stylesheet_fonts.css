@@ -1,0 +1,36 @@
+/* -------------------------------------------------
+		Stylesheet : main.css
+	    Author: Jorge Luis Mayorga
+		Update : 03/01/18
+	------------------------------------------------- */
+@font-face {
+	font-family: font-thin;
+	src: url("font-thin.otf") format("opentype");
+}
+@font-face {
+	font-family: font-regular;
+	src: url("font-regular.otf") format("opentype");
+}
+@font-face {
+	font-family: font-med;
+	src: url("font-med.otf") format("opentype");
+}
+@font-face {
+	font-family: font-light;
+	src: url("font-light.ttf") format("opentype");
+}
+@font-face {
+	font-family: font-bold;
+	src: url("font-bold.otf") format("opentype");
+}
+@font-face {
+	font-family: font-black;
+	src: url("font-black.otf") format("opentype");
+}
+
+.f-light {
+	font-family: font-light;
+}
+.f-bold {
+	font-family: font-bold;
+}
