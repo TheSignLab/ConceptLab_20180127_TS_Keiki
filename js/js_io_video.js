@@ -20,9 +20,6 @@ var onFailSoHard = function (e) {
     videoElement.load();
     videoElement.addEventListener('loadeddata', function() {
    videoElement.play();
-        
-        video2canvas();
-         //anvas_clip();
            
 }, false);
 };
@@ -32,37 +29,13 @@ if (navigator.getUserMedia) {
         video: true
     }, function (stream) {
         videoElement.src = stream;
-            videoElement.load();
-    videoElement.addEventListener('loadeddata', function() {
-   videoElement.play();
-        
-        video2canvas();
-         //anvas_clip();
-           
-}, false);
     }, onFailSoHard);
 } else if (navigator.webkitGetUserMedia) {
     navigator.webkitGetUserMedia('video', function (stream) {
         videoElement.src = window.webkitURL.createObjectURL(stream);
-            videoElement.load();
-    videoElement.addEventListener('loadeddata', function() {
-   videoElement.play();
-        
-        video2canvas();
-         //anvas_clip();
-           
-}, false);
     }, onFailSoHard);
 } else {
     videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
-        videoElement.load();
-    videoElement.addEventListener('loadeddata', function() {
-   videoElement.play();
-        
-        video2canvas();
-         //anvas_clip();
-           
-}, false);
 }
 
 
@@ -73,21 +46,8 @@ function video2canvas(){
     var tsCanvas = document.getElementById('cnOut');
     var tsContext = tsCanvas.getContext('2d');
     
-    var vw = $("views").width();
-    var vh = $("views").height();
-    
-    var vidW = $("video").width();
-    var vidH = $("video").height();
-    var vidProp = vidW/vidH;
-    var vProp = vw/vh;
-    console.log(vidProp)
-    $(tsCanvas).width(vw);
-    $(tsCanvas).height(vw/vidProp);
-    
-setInterval(function(){
-    tsContext.drawImage(tsVideo, 0, 0,vw,vw/vidProp);
-},0);
-    
+
+    tsContext.drawImage(tsVideo, 0, 0, 100, 100);
 }
 /*
 

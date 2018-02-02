@@ -1,0 +1,382 @@
+@font-face {
+    font-family: font-thin;
+    src: url("font-thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: font-regular;
+    src: url("font-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: font-med;
+    src: url("font-med.otf") format("opentype");
+}
+
+@font-face {
+    font-family: font-light;
+    src: url("font-light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: font-bold;
+    src: url("font-bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: font-black;
+    src: url("font-black.otf") format("opentype");
+}
+
+.f-light {
+    font-family: font-light;
+}
+
+.f-bold {
+    font-family: font-bold;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: block;
+    overflow: hidden;
+
+}
+
+.ui-layer {
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 0px;
+    overflow: visible;
+
+}
+
+.ui-layer video {
+    margin: auto;
+    transform: translate(-50%, 0%);
+}
+
+.ui-layer canvas {
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    background-color: rgba(200, 100, 40, 0.0)
+}
+
+
+.scanvas{
+    -webkit-mask-image: url('../images/dots_Mesa%20de%20trabajo%201.png');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    margin-top: 25px;
+
+}
+
+
+
+.front-canvas{
+    opacity: 0.8;
+     -webkit-mask-image: url('../images/dots_Mesa%20de%20trabajo%201.png');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    
+}
+
+#canvast,#canvast2{
+     width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+}
+
+
+.seemore {
+
+    display: none;
+    background-color: black;
+    z-index: 100;
+}
+
+
+
+
+.seemore-container {
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.seemore-container .title {
+    font-size: 20pt;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.seemore-container .subtitle {
+    font-size: 17pt;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.seemore-container .subtitle span:nth-child(1) {
+    position: relative;
+    left: 10px;
+}
+
+.seemore-container .subtitle span:nth-child(2) {
+    position: relative;
+    left: 5px;
+}
+
+.seemore-container .subtitle span:nth-child(2) {
+    position: relative;
+    left: 5px;
+}
+
+
+.seemore-container .wbox {
+    font-size: 20pt;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+
+}
+
+
+.seemore-container .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert(100%);
+}
+
+.seemore-container .social img {
+    padding: 10px;
+    width: 30px;
+}
+
+.seemore-container .social .separator {
+    background-color: #610031;
+    width: 2px;
+    height: 30px;
+    margin: 10px;
+    margin-right: 0px;
+
+}
+
+.wbox-active{
+    border: 1px solid #59FFCE;
+    background-color: #59FFCE;
+    
+}
+
+.wbox-submit{
+    border-color: #59FFCE;
+    background-color: #59FFCE;
+    width: 60px;
+    height: 30px;
+    font-size: 16pt;
+    padding: 2px 12px 2px 12px;
+    position: relative;
+    top: 40px;
+}
+
+.wbox{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.wbox-row {
+    width: 220px;
+}
+.wbox-row:first-child {
+    padding-bottom: 30px;
+}
+.wbox-row-c1 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+
+}
+
+.wbox-row-c1 span.cx1 {
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: 12px;
+}
+.wbox-row-c1 span.cx2 {
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    left: 10px;
+}
+    
+
+.wbox-row-c2 {
+    width: 175px;
+    height: 35px;
+    display: inline-block;
+    font-size: 10px;
+
+}
+
+.wbox-row-c2 .wbox-row-c2-label {
+    font-family: font-regular;
+    font-size: 15px;
+}
+
+
+.wbox-row-c2 .wbox-row-c2-value {
+    font-family: font-black;
+    font-size: 15px;
+}
+
+.wbox-row-c2 .wbox-row-c2-value input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.wbox-row-c2 .wbox-row-c2-value input:focus{
+    outline: none;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.camera-container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: calc(100vh - 150px);
+    z-index: 100;
+    background-color: #EFEFF4;
+}
+
+.frame-container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: calc(100vh - 150px);
+    z-index: 150;
+    background-color: rgba(100, 200, 100, 0.0);
+    overflow: hidden;
+}
+
+
+
+
+
+
+.frame-container-TheSignLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.frame-container-OutputVideoLayer {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+
+}
+
+
+.frame-container-FrontLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+
+
+}
+
+
+
+.frame-container-BackLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+   
+
+}
+
+
+
+
+
+.frame-container-FrontLayer video {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+
+    -webkit-mask-image: url('../images/dots_Mesa%20de%20trabajo%201.png');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: left;
+}
+
+*/
