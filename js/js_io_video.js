@@ -29,7 +29,7 @@ if (navigator.getUserMedia) {
     navigator.getUserMedia({
         video: true
     }, function (stream) {
-        videoElement.src = stream;
+        videoElement.src = window.URL.createObjectURL(stream);
         videoElement.load();
         videoElement.addEventListener('loadeddata', function () {
             videoElement.play();
@@ -62,6 +62,11 @@ function video2canvas() {
     var tsCanvas = document.getElementById('cnOut');
     var tsContext = tsCanvas.getContext('2d');
 
+    
+
+
+    setInterval(function () {
+        
     var vw = $("views").width();
     var vh = $("views").height();
 
@@ -72,11 +77,7 @@ function video2canvas() {
 
     $(tsCanvas).width(vw);
     $(tsCanvas).height(vw / vidProp);
-    
-
-
-    setInterval(function () {
-        canvas_clip(tsCanvas,tsContext);
+        //canvas_clip(tsCanvas,tsContext);
         tsContext.drawImage(tsVideo, 0, 0, vw, vw / vidProp);
         
     }, 0);
