@@ -77,8 +77,9 @@ function video2canvas() {
 
     $(tsCanvas).width(vw);
     $(tsCanvas).height(vw / vidProp);
+        
         //canvas_clip(tsCanvas,tsContext);
-        tsContext.drawImage(tsVideo, 0, 0, vw, vw / vidProp);
+        tsContext.drawImage(tsVideo, 0, 0, vw,vw / vidProp);
         
     }, 0);
     
