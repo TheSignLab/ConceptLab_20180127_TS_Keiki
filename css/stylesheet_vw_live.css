@@ -12,9 +12,11 @@ video{
 }
 #cnOut{
         position: absolute;
-        width: 100vw;
-    height: calc(100vh - 100px);
+width: 100%;
     z-index: 20;
+}
+#cnIn{
+   display: none;
 }
 /* --------------------------------------------------------- */
 

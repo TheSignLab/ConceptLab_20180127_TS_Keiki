@@ -13,7 +13,7 @@
     <meta name="author" content="Jorge Luis Mayorga Taborda">
     <meta name="description" content="TheSignLab es un estudio de diseño multidisciplinario con sede en Bogotá, compuesto por el talento más nuevo en diseño e ingeniería. Al aplicar una metodología Agile para el diseño, ofrecemos soluciones creativas únicas cuando se requiere un resultado comercial fresco y holístico. En pocas palabras: TheSignLab no solo crea marcas, estrategias de marketing sino soluciones de alta tecnología que resuenan en la audiencia actual.">
     <meta name="keywords" content="Diseño,diseño de paginas web,desarrollo web,inovación,brand identity,publicidad">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- General Tags -->
 
     <!-- OpenGraph:: Facebook -->
@@ -69,7 +69,8 @@
     <loader></loader>
 
     <nav>
-        <img src="img/nav-dots.png" class="btn-left"><img src="img/nav-close.png" class="btn-right">
+        <img src="img/nav-dots.png" class="btn-left">
+        <img src="img/nav-close.png" class="btn-right" onclick="ctrlRst()">
     </nav>
 
     <views>
@@ -112,7 +113,24 @@
         <view class="vw-legal"></view>
     </views>
 
-    <footer></footer>
+    <footer>
+
+        <viewButton class="main">
+            <button onclick="ctrlFx()"><img src="img/btn-effects.png"</button>
+            <button onclick="ctrlSnap()"><img src="img/btn-snap.png"</button>
+            <button onclick="ctrlSwitch()"><img src="img/btn-swcam.png"</button>
+        </viewButton>
+    </footer>
+    <footer>
+
+        <viewButton class="fx">
+            <button onclick="updateFx(1)"><img src="img/btn-fx1.png"</button>
+            <button onclick="updateFx(2)"><img src="img/btn-fx2.png"</button>
+            <button onclick="updateFx(3)"><img src="img/btn-fx3.png"</button>
+            <button onclick="updateFx(4)"><img src="img/btn-fx4.png"</button>
+        </viewButton>
+
+    </footer>
 
     <backend>
         <canvas id="cnIn"></canvas>
@@ -144,13 +162,18 @@
 <link rel="stylesheet" href="css/stylesheet_vw_form.css">
 <link rel="stylesheet" href="css/stylesheet_vw_live.css">
 <link rel="stylesheet" href="css/stylesheet_nav.css">
+<link rel="stylesheet" href="css/stylesheet_buttons.css">
 <link rel="stylesheet" href="css/stylesheet_footer.css">
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="js/js_canvas_mask.js"></script>
+<script src="js/js_fx.js"></script>
+<script src="js/js_canvas.js"></script>
+<script src="js/js_ui_ux.js"></script>
 <script src="js/js_io_video.js"></script>
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 <!--  END COMP ---------------------------------------------------------------------------------------------------------------------- -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+
 </html>

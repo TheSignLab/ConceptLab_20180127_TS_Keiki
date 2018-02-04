@@ -53,39 +53,7 @@ if (navigator.getUserMedia) {
 video2canvas()
 
 // ---------------------------- //
-function video2canvas() {
-    var tsVideo = document.querySelector('video');
-    var tsCanvas = document.getElementById('cnOut');
-    var tsContext = tsCanvas.getContext('2d');
 
-    var tsVideo = document.querySelector('video');
-    var tsCanvas = document.getElementById('cnOut');
-    var tsContext = tsCanvas.getContext('2d');
-
-    
-
-
-    setInterval(function () {
-        
-    var vw = $("views").width();
-    var vh = $("views").height();
-
-    var vidW = $("video").width();
-    var vidH = $("video").height();
-    var vidProp = vidW / vidH;
-    var vProp = vw / vh;
-
-    $(tsCanvas).width(vw);
-    $(tsCanvas).height(vw / vidProp);
-        
-        //canvas_clip(tsCanvas,tsContext);
-        tsContext.drawImage(tsVideo, 0, 0, vw,vw / vidProp);
-        
-    }, 0);
-    
-    
-
-}
 /*
 
 

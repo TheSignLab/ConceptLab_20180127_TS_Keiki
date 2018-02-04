@@ -1,0 +1,59 @@
+footer {
+    display: none;
+}
+
+
+
+viewButton {
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0px;
+}
+
+
+
+viewButton.main button {
+    width: 33%;
+    height: 90px;
+    padding: 0px;
+    margin: 5px;
+    border: none;
+
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+viewButton.main button img {
+    width: 85px;
+}
+
+
+viewButton.fx {
+    display: flex;
+    flex-direction: row;
+}
+
+viewButton.fx button {
+    width: 25%;
+    height: 90px;
+    padding: 0px;
+    margin: 5px;
+    border: none;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+viewButton.fx button img {
+    width: 85px;
+}
