@@ -8,11 +8,9 @@
 /* FUNDAMENTALS
 /* --------------------------------------------------------- */
 video{
-    display: none;
 }
 #cnOut{
         position: absolute;
-width: 100%;
     z-index: 20;
 }
 #cnIn{
