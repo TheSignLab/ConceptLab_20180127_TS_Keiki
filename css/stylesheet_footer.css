@@ -13,6 +13,7 @@ footer{
     width: 100vw;
     height: 100px;
     display: none;
-     background-color: #efefef;
+    z-index: 20;
+
 }
 /* --------------------------------------------------------- */

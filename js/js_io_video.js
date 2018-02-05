@@ -45,6 +45,15 @@ if (navigator.getUserMedia) {
             video2canvas();
         }, false);
     }, onFailSoHard);
+} else if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia('video', function (stream) {
+        videoElement.src = window.URL.createObjectURL(stream);
+        videoElement.load();
+        videoElement.addEventListener('loadeddata', function () {
+            videoElement.play();
+            video2canvas();
+        }, false);
+    }, onFailSoHard);
 } else {
     videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
 
@@ -79,3 +88,7 @@ function video2canvas() {
     }
 }
 */
+
+
+
+

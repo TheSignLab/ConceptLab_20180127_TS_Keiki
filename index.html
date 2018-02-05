@@ -73,12 +73,52 @@
         <img src="img/nav-close.png" class="btn-right" onclick="ctrlRst()">
     </nav>
 
-    <views>
+    <div class="covers">
 
-        <view class="vw-live view-on-top">
+        <div class="cover intro">
+
+            <img src="img/nav-close.png" class="btn-right" onclick="ctrlRst()">
+            <img src="img/intro-logo.png" class="img-logo" onclick="animAceptoTerminos()">
+            <div class="wrapper">
+                <div class="btn-acept" onclick="ctrlAcceptTerms()">ACEPTO LOS TERMINOS Y CONDICIONES</div>
+                <div class="btn-ver" onclick="ctrlSeeTerms()">*VER LOS TERMINOS Y CONDICIONES</div>
+            </div>
+
+        </div>
+        <div class="cover legal">
+
+            <img src="img/nav-close.png" class="btn-right" onclick="ctrlRst()">
+
+            <div class="banner">
+                <div class="bn-wrapper">
+                    <img class="banner-img" src="img/intro-logo.png" height="100%">
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="title">TERMINOS Y CONDICIONES</div>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                    <p> - - - - - - - - - - - - - - - - - - - - - - - - - - - - Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+
+                </div>
+                <div class="footer">
+                    <div class="footer-left-btn" onclick="animButton(this);go2MainView()">ACEPTO</div>
+                    <div class="footer-right-btn" onclick="animButton(this);go2IntroCover()">NO ACEPTO</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <views style="display: none !important;">
+
+        <view class="vw-live view-on-top" >
 
             <canvas id="cnOut"></canvas>
-            <video muted></video>
+            <video muted autoplay playsinline></video>
         </view>
 
         <view class="vw-form">
@@ -114,22 +154,27 @@
     </views>
 
     <footer>
-
         <viewButton class="main">
-            <button onclick="ctrlFx()"><img src="img/btn-effects.png"</button>
-            <button onclick="ctrlSnap()"><img src="img/btn-snap.png"</button>
-            <button onclick="ctrlSwitch()"><img src="img/btn-swcam.png"</button>
+            <button onclick="ctrlFx();animButton(this)"><img src="img/btn-effects.png"></button>
+            <button onclick="ctrlSnap();animButton(this)"><img src="img/btn-snap.png"></button>
+            <button onclick="ctrlSwitch();animButton(this)"><img src="img/btn-swcam.png"></button>
         </viewButton>
     </footer>
     <footer>
-
         <viewButton class="fx">
-            <button onclick="updateFx(1)"><img src="img/btn-fx1.png"</button>
-            <button onclick="updateFx(2)"><img src="img/btn-fx2.png"</button>
-            <button onclick="updateFx(3)"><img src="img/btn-fx3.png"</button>
-            <button onclick="updateFx(4)"><img src="img/btn-fx4.png"</button>
+            <button onclick="updateFx(1);animButton(this)"><img src="img/btn-fx1.png"></button>
+            <button onclick="updateFx(2);animButton(this)"><img src="img/btn-fx2.png"></button>
+            <button onclick="updateFx(3);animButton(this)"><img src="img/btn-fx3.png"></button>
+            <button onclick="updateFx(4);animButton(this)"><img src="img/btn-fx4.png"></button>
         </viewButton>
-
+    </footer>
+    <footer>
+        <viewButton class="snap">
+            <button onclick="animButton(this)"><img src="img/btn_down-01.png">GUARDAR</button>
+            <div class="vb"></div>
+            <button onclick="animButton(this)"><img src="img/btn_share-01.png"><span>COMPARTIR</span></button>
+             <button onclick="animButton(this)" class="btn-snap-quierosabermas"><span>QUIERO SABER MAS</span></button>
+        </viewButton>
     </footer>
 
     <backend>
@@ -138,7 +183,7 @@
         <canvas id="cnFx2"></canvas>
         <canvas id="cnFX2Masked"></canvas>
         <canvas id="cnMerged"></canvas>
-        <img src="img/fx_mask.png" >
+        <img src="img/fx_mask.png">
     </backend>
 
 </body>
@@ -152,14 +197,15 @@
 
 
 
-
-
-
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 <!--  INIT COMP --------------------------------------------------------------------------------------------------------------------- -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 <link rel="stylesheet" href="css/stylesheet_fonts.css">
 <link rel="stylesheet" href="css/stylesheet_layout.css">
+<link rel="stylesheet" href="css/stylesheet_cover.css">
 <link rel="stylesheet" href="css/stylesheet_vw_form.css">
 <link rel="stylesheet" href="css/stylesheet_vw_live.css">
 <link rel="stylesheet" href="css/stylesheet_nav.css">
@@ -167,11 +213,14 @@
 <link rel="stylesheet" href="css/stylesheet_footer.css">
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/jquery.path.js"></script>
+
 <script src="js/js_canvas_mask.js"></script>
 <script src="js/js_fx.js"></script>
 <script src="js/js_canvas.js"></script>
 <script src="js/js_ui_ux.js"></script>
 <script src="js/js_io_video.js"></script>
+<script src="js/js_cover.js"></script>
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 <!--  END COMP ---------------------------------------------------------------------------------------------------------------------- -->

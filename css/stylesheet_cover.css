@@ -1,0 +1,232 @@
+.covers {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 35;
+    font-family: font-bold;
+    font-weight: 500;
+
+
+
+}
+
+.cover {
+    /* Old browsers */
+    background-image: url("../img/intro-logo-bg-01-01.png"), -moz-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* FF3.6-15 */
+    background-image: url("../img/intro-logo-bg-01-01.png"), -webkit-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: url("../img/intro-logo-bg-01-01.png"), linear-gradient(135deg, #00eedc 0%, #6e38e5 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: cover;
+
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.cover.intro {
+
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0px;
+
+
+
+}
+
+
+.cover.intro .btn-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    padding: 10px;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.cover.intro .img-logo {
+    width: 70vw;
+    margin: 0 auto;
+    display: block;
+    padding-top: 25%;
+}
+
+.cover.intro .btn-acept {
+    background-color: white;
+    color: #5C70FF;
+    font-size: 15px;
+    width: 80vw;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    margin: 0 auto;
+    width: 80vw;
+
+}
+
+.cover.intro .btn-ver {
+    color: #fff;
+    font-size: 16px;
+    width: 80vw;
+    text-align: center;
+    padding: 5px;
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 80vw;
+
+}
+
+
+
+
+.cover.intro .wrapper {
+
+    position: absolute;
+    bottom: 120px;
+    width: 100vw;
+}
+
+
+
+.cover.legal {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-image: none;
+    z-index: 25;
+
+}
+
+.cover.legal .btn-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    padding: 10px;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.cover.legal .banner {
+    width: 100vw;
+    height: 150px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00eedc+0,6e38e5+100 */
+    background: #00eedc;
+    /* Old browsers */
+    background-image: url("../img/banner-pattern.png"), -moz-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* FF3.6-15 */
+    background-image: url("../img//banner-pattern.png"), -webkit-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: url("../img//banner-pattern.png"), linear-gradient(135deg, #00eedc 0%, #6e38e5 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: cover;
+}
+
+.cover.legal .banner .bn-wrapper {
+
+    margin: 0 auto;
+     height: 150px;
+   width: 150px;
+}
+.cover.legal .wrapper {
+    width: calc(80vw - 10px);
+    margin:0 auto;
+    height: calc(100vh - 30px);
+}
+.cover.legal .wrapper .content{
+
+    height: 220px;
+    overflow-y: scroll;
+    font-family: font-light;
+    color: #5C70FF;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 30px;
+}
+
+
+
+.cover.legal  .title{
+        width: 100%;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00eedc+0,6e38e5+100 */
+    background: #00eedc;
+    /* Old browsers */
+    background-image:  -moz-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* FF3.6-15 */
+    background-image:  -webkit-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(135deg, #00eedc 0%, #6e38e5 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: cover;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+    
+    padding: 5px 5px 5px 5px;
+    margin:20px 0px 10px 0px;
+}
+.cover.legal .footer{
+    width: 100%;
+}
+
+.cover.legal .footer-left-btn{
+         width: 40%;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00eedc+0,6e38e5+100 */
+    background: #00eedc;
+    /* Old browsers */
+    background-image:  -moz-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* FF3.6-15 */
+    background-image:  -webkit-linear-gradient(-45deg, #00eedc 0%, #6e38e5 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background-image: linear-gradient(135deg, #00eedc 0%, #6e38e5 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: cover;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    color: white;
+}
+
+.cover.legal .footer-right-btn{
+         width: 40%;
+
+    
+    color:#6e38e5;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    float: right;
+    display: inline-block;
+ 
+    
+  background: #fff;
+  border: 2px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #3a4ed5 100%);
+  border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+  border-image-slice: 1;
+    border-radius: 10px;
+    
+}
+
+
+.cover p{
+    font-family: font-regular;
+}

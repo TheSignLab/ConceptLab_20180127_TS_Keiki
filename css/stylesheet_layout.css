@@ -12,8 +12,8 @@ html,
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #dcdcdc;
-    overflow: hidden;
+    background-color: white;
+        overflow: hidden;
     width: 100vw;
     height: 100vh;
     
@@ -59,6 +59,7 @@ views {
     height: calc(100vh - 100px);
     display: block;
     overflow: hidden;
+    display: none;
 }
 
 view {
