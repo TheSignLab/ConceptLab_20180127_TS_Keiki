@@ -25,36 +25,29 @@ var onFailSoHard = function (e) {
     }, false);
 };
 
-if(navigator.getUserMedia){
-    alert("Usando default")
-}else{
-    alert(navigator.mediaDevices.getUserMedia)
-    alert("Usando otra cosa")
-}
+
 
 if (navigator.getUserMedia) {
-    navigator.getUserMedia({
-        video: true
-    }, function (stream) {
-        videoElement.src = window.URL.createObjectURL(stream);
-        videoElement.load();
-        videoElement.addEventListener('loadeddata', function () {
-            videoElement.play();
-            video2canvas();
-        }, false);
-    }, onFailSoHard);
+    try {
+        navigator.getUserMedia({
+            video: true
+        }, function (stream) {
+            videoElement.src = window.URL.createObjectURL(stream);
+            videoElement.srcObject = stream;
+            videoElement.load();
+            videoElement.addEventListener('loadeddata', function () {
+                videoElement.play();
+                video2canvas();
+                alert("Entrando a getUserMedia con mediadevices");
+            }, false);
+        }, onFailSoHard);
+    } catch (e) {
+        alert(e.message)
+        alert("Error")
+    }
 } else if (navigator.webkitGetUserMedia) {
     navigator.webkitGetUserMedia('video', function (stream) {
         videoElement.src = window.webkitURL.createObjectURL(stream);
-        videoElement.load();
-        videoElement.addEventListener('loadeddata', function () {
-            videoElement.play();
-            video2canvas();
-        }, false);
-    }, onFailSoHard);
-} else if (navigator.mediaDevices.getUserMedia) {
-    navigator.mediaDevices.getUserMedia('video', function (stream) {
-        videoElement.src = window.URL.createObjectURL(stream);
         videoElement.load();
         videoElement.addEventListener('loadeddata', function () {
             videoElement.play();
@@ -95,7 +88,3 @@ function video2canvas() {
     }
 }
 */
-
-
-
-

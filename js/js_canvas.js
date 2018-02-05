@@ -1,5 +1,5 @@
    // ---//
-try{
+
    var vw = $("footer").width();
    var vh = $("views").height();
 
@@ -128,7 +128,7 @@ try{
        } else {
            toogleColorized = true;
        }
-       console.log(toogleColorized)
+       
    }, 13)
 
 
@@ -241,7 +241,3 @@ try{
        return tsCanvas
 
    }
-}
-catch(e){
-    alert(e.toString())
-}
