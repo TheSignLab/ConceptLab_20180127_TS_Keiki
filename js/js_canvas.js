@@ -1,5 +1,5 @@
    // ---//
-
+try{
    var vw = $("footer").width();
    var vh = $("views").height();
 
@@ -241,3 +241,7 @@
        return tsCanvas
 
    }
+}
+catch(e){
+    alert(e.toString())
+}

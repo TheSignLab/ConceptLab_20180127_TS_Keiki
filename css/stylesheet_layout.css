@@ -56,10 +56,10 @@ video{
 /* --------------------------------------------------------- */
 views {
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: 400px;
     display: block;
     overflow: hidden;
-    display: none;
+    
 }
 
 view {

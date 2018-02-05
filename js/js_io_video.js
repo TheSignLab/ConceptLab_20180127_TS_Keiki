@@ -25,6 +25,13 @@ var onFailSoHard = function (e) {
     }, false);
 };
 
+if(navigator.getUserMedia){
+    alert("Usando default")
+}else{
+    alert(navigator.mediaDevices.getUserMedia)
+    alert("Usando otra cosa")
+}
+
 if (navigator.getUserMedia) {
     navigator.getUserMedia({
         video: true

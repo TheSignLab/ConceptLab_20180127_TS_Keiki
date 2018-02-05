@@ -11,6 +11,7 @@ viewButton {
     display: flex;
     flex-direction: row;
     bottom: 0px;
+    z-index: 10;
 }
 
 
