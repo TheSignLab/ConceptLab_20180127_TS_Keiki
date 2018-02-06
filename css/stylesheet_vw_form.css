@@ -1,9 +1,7 @@
 /* ---------------------- */
 /*      VIEW :: FORM      */
 /* ---------------------- */
-
-
-.vw-form.view-on-top  {
+.vw-form {
     
     background-color: black;
     width: 100vw;
@@ -12,7 +10,7 @@
     top: 0px;
     z-index: 0;
     display: flex;
-
+    display: none; /*comment*/
     flex-direction: column;
     justify-content: center;
 

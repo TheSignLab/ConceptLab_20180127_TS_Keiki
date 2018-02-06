@@ -12,8 +12,8 @@ html,
 body {
     padding: 0px;
     margin: 0px;
-    background-color: white;
-        overflow: hidden;
+    background-color: #dcdcdc;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     
@@ -56,10 +56,9 @@ video{
 /* --------------------------------------------------------- */
 views {
     width: 100vw;
-    height: 400px;
+    height: calc(100vh - 100px);
     display: block;
     overflow: hidden;
-    
 }
 
 view {

@@ -25,26 +25,17 @@ var onFailSoHard = function (e) {
     }, false);
 };
 
-
-
 if (navigator.getUserMedia) {
-    try {
-        navigator.getUserMedia({
-            video: true
-        }, function (stream) {
-            videoElement.src = window.URL.createObjectURL(stream);
-            videoElement.srcObject = stream;
-            videoElement.load();
-            videoElement.addEventListener('loadeddata', function () {
-                videoElement.play();
-                video2canvas();
-                
-            }, false);
-        }, onFailSoHard);
-    } catch (e) {
-        alert(e.message)
-        alert("Error")
-    }
+    navigator.getUserMedia({
+        video: true
+    }, function (stream) {
+        videoElement.src = window.URL.createObjectURL(stream);
+        videoElement.load();
+        videoElement.addEventListener('loadeddata', function () {
+            videoElement.play();
+            video2canvas();
+        }, false);
+    }, onFailSoHard);
 } else if (navigator.webkitGetUserMedia) {
     navigator.webkitGetUserMedia('video', function (stream) {
         videoElement.src = window.webkitURL.createObjectURL(stream);
