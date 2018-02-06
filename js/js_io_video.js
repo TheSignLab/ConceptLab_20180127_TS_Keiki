@@ -14,53 +14,100 @@
 //  Cam or Video File on canIn
 // ---------------------------- //
 var videoElement = document.querySelector('video');
-var onFailSoHard = function (e) {
-    console.log('Reeeejected!', e);
-    videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
+videoElement.setAttribute('autoplay', '');
+videoElement.setAttribute('muted', '');
+videoElement.setAttribute('playsinline', '');
 
+var constraints = {
+    audio: false,
+    video: true
+};
+
+function handleSuccess(stream) {
+    window.stream = stream; // make stream available to browser console
+    videoElement.srcObject = stream;
     videoElement.load();
     videoElement.addEventListener('loadeddata', function () {
         videoElement.play();
         video2canvas();
     }, false);
-};
+}
 
-
-
-if (navigator.getUserMedia) {
-    try {
-        navigator.getUserMedia({
-            video: true
-        }, function (stream) {
-            videoElement.src = window.URL.createObjectURL(stream);
-            videoElement.srcObject = stream;
-            videoElement.load();
-            videoElement.addEventListener('loadeddata', function () {
-                videoElement.play();
-                video2canvas();
-                
-            }, false);
-        }, onFailSoHard);
-    } catch (e) {
-        alert(e.message)
-        alert("Error")
-    }
-} else if (navigator.webkitGetUserMedia) {
-    navigator.webkitGetUserMedia('video', function (stream) {
-        videoElement.src = window.webkitURL.createObjectURL(stream);
-        videoElement.load();
-        videoElement.addEventListener('loadeddata', function () {
-            videoElement.play();
-            video2canvas();
-        }, false);
-    }, onFailSoHard);
-} else {
-    videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
+function handleError(error) {
+    
+    videoElement.src = 'video/ts-video-sample.mp4';
+    videoElement.load();
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
 
 }
 
-video2canvas()
 
+
+
+    var vw = $(".footer").width();
+    var vh = $("views").height();
+
+    var vidW = $("video").width();
+    var vidH = $("video").height();
+
+
+    tsCanvasOut.width = vw;
+    tsCanvasOut.height = vw / vidProp;
+
+    tsCanvasIn.width = vw;
+    tsCanvasIn.height = vw / vidProp;
+
+    tsCanvasFx1.width = vw;
+    tsCanvasFx1.height = vw / vidProp;
+
+    tsCanvasFx2.width = vw;
+    tsCanvasFx2.height = vw / vidProp;
+
+window.onload = function() {
+    navigator.mediaDevices.getUserMedia(constraints).
+    then(handleSuccess).catch(handleError);
+
+    video2canvas();
+}
+
+/*
+
+var constraints = {
+    audio: false,
+    video: {
+        facingMode: 'user'
+    }
+}
+
+var pCam = navigator.mediaDevices.getUserMedia(constraints);
+pCam.then(stream => pCamSuccessful(stream));
+pCam.catch(e => pCamError(e));
+
+
+function pCamSuccessfu(stream) {
+    videoElement.srcObject = stream;
+    videoElement.load();
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
+}
+
+function pCamError(e) {
+
+    videoElement.src ='video/ts-video-sample.mp4';
+    videoElement.load();
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
+}
+
+
+video2canvas();
 // ---------------------------- //
 
 /*

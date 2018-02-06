@@ -46,6 +46,17 @@
     <!-- --------------  HTML Head Icon Tag      ----------------->
     <!-- --------------  HTML Head Meta Tag  ------------------------------------------>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="stylesheet" href="css/stylesheet_fonts.css">
+    <link rel="stylesheet" href="css/stylesheet_layout.css">
+    <link rel="stylesheet" href="css/stylesheet_cover.css">
+    <link rel="stylesheet" href="css/stylesheet_vw_form.css">
+    <link rel="stylesheet" href="css/stylesheet_vw_live.css">
+    <link rel="stylesheet" href="css/stylesheet_nav.css">
+    <link rel="stylesheet" href="css/stylesheet_buttons.css">
+    <link rel="stylesheet" href="css/stylesheet_footer.css">
+
 </head>
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 <!--  END HEAD ---------------------------------------------------------------------------------------------------------------------- -->
@@ -155,45 +166,103 @@
         </view>
         <view class="vw-legal"></view>
     </views>
+    
+    <style>
+        .app-footer{
+            background-color: #fff;
+            z-index: 1000;
+            width: 100vw;
+            height: auto;
+            position: fixed;
+            bottom: 0px;
+        }
+        .app-footer-main-icon{
+            width: 33vw;
+            float: left;
+            display: inline-block;
+             background-color: #fff;
+        }
+        .app-footer-main-icon img{
+            padding: 10px;
+            margin: 10px;
+             background-color: #fff;
+        }
+            .app-footer-fx-icon{
+            width: 25vw;
+            float: left;
+            display: inline-block;
+             background-color: #fff;
+        }
+        .app-footer-fx-icon img{
+            padding: 10px;
+            margin: 10px;
+             background-color: #fff;
+        }
+    
+    </style>
+<div class="app-footer vb-main">
+    <div class="app-footer-main-icon" onclick="ctrlFx()"><center><img src="img/btn-effects.png " width="60%"></center></div>
+    <div class="app-footer-main-icon"><center><img src="img/btn-snap.png" width="60%"></center></div>
+    <div class="app-footer-main-icon"><center><img src="img/btn-swcam.png" width="60%"></center></div>
+</div>
+    
+    <div class="app-footer vb-fx">
+    <div class="app-footer-fx-icon" onclick="ctrlMain()"><center><img src="img/btn-fx1.png" width="60%"></center></div>
+    <div class="app-footer-fx-icon" onclick="ctrlMain()"><center><img src="img/btn-fx2.png" width="60%"></center></div>
+    <div class="app-footer-fx-icon" onclick="ctrlMain()"><center><img src="img/btn-fx3.png" width="60%"></center></div>
+    <div class="app-footer-fx-icon" onclick="ctrlMain()"><center><img src="img/btn-fx4.png" width="60%"></center></div>
 
-    <footer>
-        <viewButton class="main">
-            <button onclick="ctrlFx();animButton(this)"><img src="img/btn-effects.png"></button>
-            <button onclick="ctrlSnap();animButton(this)"><img src="img/btn-snap.png"></button>
-            <button onclick="ctrlSwitch();animButton(this)"><img src="img/btn-swcam.png"></button>
-        </viewButton>
-    </footer>
-    <footer>
-        <viewButton class="fx">
-            <button onclick="updateFx(1);animButton(this)"><img src="img/btn-fx1.png"></button>
-            <button onclick="updateFx(2);animButton(this)"><img src="img/btn-fx2.png"></button>
-            <button onclick="updateFx(3);animButton(this)"><img src="img/btn-fx3.png"></button>
-            <button onclick="updateFx(4);animButton(this)"><img src="img/btn-fx4.png"></button>
-        </viewButton>
-    </footer>
-    <footer>
-        <viewButton class="snap">
-            <button onclick="animButton(this)"><img src="img/btn_down-01.png">GUARDAR</button>
-            <div class="vb"></div>
-            <button onclick="animButton(this)"><img src="img/btn_share-01.png"><span>COMPARTIR</span></button>
-            <button onclick="animButton(this);ctrlSeemore();" class="btn-snap-quierosabermas"><span>QUIERO SABER MAS</span></button>
-        </viewButton>
-    </footer>
-        <footer>
-        <viewButton class="form">
-           <img src="img/vw-form-footer-01.svg" height="100%" style="margin: 0 auto;">
-        </viewButton>
-    </footer>
+</div>
+    
+    <!--
+    <div class="footer">
+        <div class="viewButton main ">
+            <div class="button " onclick="ctrlFx();animButton(this) ">
+                <center><img src="img/btn-effects.png "></center>
+            </div>
+            <div class="button " onclick="ctrlSnap();animButton(this) ">
+                <center><img src="img/btn-snap.png "> </center>
+            </div>
+
+            <div class="button " onclick="ctrlSwitch();animButton(this) ">
+                <center><img src="img/btn-swcam.png "> </center>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer ">
+        <div class="viewButton fx ">
+            <div class="button " onclick="updateFx(1);animButton(this) "><img src="img/btn-fx1.png "></div>
+            <div class="button " onclick="updateFx(2);animButton(this) "><img src="img/btn-fx2.png "></div>
+            <div class="button " onclick="updateFx(3);animButton(this) "><img src="img/btn-fx3.png "></div>
+            <div class="button " onclick="updateFx(4);animButton(this) "><img src="img/btn-fx4.png "></div>
+        </div>
+    </div>
+    <div class="footer ">
+        <div class="viewButton snap ">
+            <a id="idDown "><button onclick="animButton(this); " ><img src="img/btn_down-01.png ">GUARDAR</button></a>
+            <div class="vb "></div>
+            <div class="button " onclick="animButton(this) "><img src="img/btn_share-01.png "><span>COMPARTIR</span></div>
+            <div class="button " onclick="animButton(this);ctrlSeemore(); " class="btn-snap-quierosabermas "><span>QUIERO SABER MAS</span></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="viewButton form ">
+            <img src="img/vw-form-footer-01.svg " height="100% " style="margin: 0 auto; ">
+        </div>
+    </div>
 
     <backend>
-        <canvas id="cnIn"></canvas>
-        <canvas id="cnFx1"></canvas>
-        <canvas id="cnFx2"></canvas>
-        <canvas id="cnFX2Masked"></canvas>
-        <canvas id="cnMerged"></canvas>
-        <img src="img/fx_mask.png">
-    </backend>
+        <canvas id="cnIn "></canvas>
+        <canvas id="cnFx1 "></canvas>
+        <canvas id="cnFx2 "></canvas>
+        <canvas id="cnFX2Masked "></canvas>
+        <canvas id="cnMerged "></canvas>
+        <img src="img/fx_mask.png ">
+        <img id="exportCanvasImg ">
 
+    </backend>
+-->
 </body>
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 <!--  END BODY ---------------------------------------------------------------------------------------------------------------------- -->
@@ -209,26 +278,17 @@
 <!--  INIT COMP --------------------------------------------------------------------------------------------------------------------- -->
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-<link rel="stylesheet" href="css/stylesheet_fonts.css">
-<link rel="stylesheet" href="css/stylesheet_layout.css">
-<link rel="stylesheet" href="css/stylesheet_cover.css">
-<link rel="stylesheet" href="css/stylesheet_vw_form.css">
-<link rel="stylesheet" href="css/stylesheet_vw_live.css">
-<link rel="stylesheet" href="css/stylesheet_nav.css">
-<link rel="stylesheet" href="css/stylesheet_buttons.css">
-<link rel="stylesheet" href="css/stylesheet_footer.css">
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="js/jquery.path.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+<script src="js/jquery.path.js "></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js "></script>
 
-<script src="js/js_canvas_mask.js"></script>
-<script src="js/js_fx.js"></script>
-<script src="js/js_canvas.js"></script>
-<script src="js/js_ui_ux.js"></script>
-<script src="js/js_io_video.js"></script>
-<script src="js/js_cover.js"></script>
+<script src="js/js_canvas.js "></script>
+<script src="js/js_ui_ux.js "></script>
+<script src="js/js_io_video.js "></script>
+<script src="js/js_cover.js "></script>
+
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
 <!--  END COMP ---------------------------------------------------------------------------------------------------------------------- -->

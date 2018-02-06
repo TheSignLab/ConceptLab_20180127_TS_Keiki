@@ -18,15 +18,15 @@ function animAceptoTerminos() {
 
 function goBackInit() {
 
-    
-    
-        setTimeout(function () {
 
-          $(".covers").animate({
-        top: 0,
-    }, 650);
 
-    $(".covers .footer-wrapper").show();
+    setTimeout(function () {
+
+        $(".covers").animate({
+            top: 0,
+        }, 650);
+
+        $(".covers .footer-wrapper").show();
 
     }, 250);
 
