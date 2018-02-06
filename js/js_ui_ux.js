@@ -5,7 +5,7 @@ function ctrlRst() {
     setTimeout(function () {
         document.querySelector("viewButton.main").parentElement.style.display = "block";
         document.querySelector("viewButton.fx").parentElement.style.display = "none";
-           document.querySelector("viewButton.snap").parentElement.style.display = "none";
+        document.querySelector("viewButton.snap").parentElement.style.display = "none";
     }, 200)
 
 }
@@ -22,7 +22,7 @@ function ctrlSwitch() {
 function ctrlSnap() {
     isPaused = false;
     setTimeout(function () {
-document.querySelector("viewButton.main").parentElement.style.display = "none";
+        document.querySelector("viewButton.main").parentElement.style.display = "none";
         document.querySelector("viewButton.fx").parentElement.style.display = "none";
         document.querySelector("viewButton.snap").parentElement.style.display = "block";
     }, 200);
@@ -33,7 +33,19 @@ function ctrlFx() {
     setTimeout(function () {
         document.querySelector("viewButton.main").parentElement.style.display = "none";
         document.querySelector("viewButton.fx").parentElement.style.display = "block";
-           document.querySelector("viewButton.snap").parentElement.style.display = "none";
+        document.querySelector("viewButton.snap").parentElement.style.display = "none";
+    }, 200);
+}
+
+function ctrlSeemore() {
+    isPaused = true;
+    setTimeout(function () {
+        document.querySelector("viewButton.main").parentElement.style.display = "none";
+        document.querySelector("viewButton.fx").parentElement.style.display = "none";
+        document.querySelector("viewButton.snap").parentElement.style.display = "none";
+        document.querySelector("viewButton.form").parentElement.style.display = "block";
+        document.querySelector("view").classList.remove("view-on-top");
+        document.querySelector("view.vw-form").classList.add("view-on-top");
     }, 200);
 }
 

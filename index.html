@@ -69,8 +69,8 @@
     <loader></loader>
 
     <nav>
-        <img src="img/nav-dots.png" class="btn-left">
-        <img src="img/nav-close.png" class="btn-right" onclick="ctrlRst()">
+        <img src="img/nav-dots.png" class="btn-left" onclick="animButton(this);goBackInit()">
+        <img src="img/nav-close.png" class="btn-right" onclick="animButton(this);ctrlRst()">
     </nav>
 
     <div class="covers">
@@ -103,19 +103,22 @@
                     <p> - - - - - - - - - - - - - - - - - - - - - - - - - - - - Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
                 </div>
-                <div class="footer">
-                    <div class="footer-left-btn" onclick="animButton(this);go2MainView()">ACEPTO</div>
-                    <div class="footer-right-btn" onclick="animButton(this);go2IntroCover()">NO ACEPTO</div>
-                </div>
-            </div>
 
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer">
+                    <div class="footer-left-btn" onclick="animButton(this);go2MainView();ctrlAcceptTerms()"><img src="img/btn-accept-01.png"></div>
+                    <div class="footer-right-btn" onclick="animButton(this);go2IntroCover()"><img src="img/btn-noaccept-01.png"></div>
+                </div>
+
+            </div>
         </div>
 
     </div>
 
-    <views >
+    <views>
 
-        <view class="vw-live view-on-top" >
+        <view class="vw-live view-on-top">
 
             <canvas id="cnOut"></canvas>
             <video muted autoplay playsinline controls="true"></video>
@@ -173,7 +176,12 @@
             <button onclick="animButton(this)"><img src="img/btn_down-01.png">GUARDAR</button>
             <div class="vb"></div>
             <button onclick="animButton(this)"><img src="img/btn_share-01.png"><span>COMPARTIR</span></button>
-             <button onclick="animButton(this)" class="btn-snap-quierosabermas"><span>QUIERO SABER MAS</span></button>
+            <button onclick="animButton(this);ctrlSeemore();" class="btn-snap-quierosabermas"><span>QUIERO SABER MAS</span></button>
+        </viewButton>
+    </footer>
+        <footer>
+        <viewButton class="form">
+           <img src="img/vw-form-footer-01.svg" height="100%" style="margin: 0 auto;">
         </viewButton>
     </footer>
 

@@ -16,18 +16,38 @@ function animAceptoTerminos() {
     }
 }
 
+function goBackInit() {
+
+    
+    
+        setTimeout(function () {
+
+          $(".covers").animate({
+        top: 0,
+    }, 650);
+
+    $(".covers .footer-wrapper").show();
+
+    }, 250);
+
+}
+
+
 
 function ctrlAcceptTerms() {
     $(".covers").animate({
         top: -2500,
     }, 650);
 
+    $(".covers .footer-wrapper").hide();
+    $(".cover.intro").fadeIn();
+    $(".cover.legal").fadeOut();
 
 }
 
 function ctrlSeeTerms() {
     $(".cover.intro").fadeOut();
-    $(".cover.lega").fadeIn();
+    $(".cover.legal").fadeIn();
 }
 
 

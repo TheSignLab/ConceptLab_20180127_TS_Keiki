@@ -38,7 +38,7 @@ if (navigator.getUserMedia) {
             videoElement.addEventListener('loadeddata', function () {
                 videoElement.play();
                 video2canvas();
-                alert("Entrando a getUserMedia con mediadevices");
+                
             }, false);
         }, onFailSoHard);
     } catch (e) {

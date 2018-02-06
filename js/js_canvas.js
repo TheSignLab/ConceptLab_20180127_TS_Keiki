@@ -33,6 +33,18 @@
 
    var isPaused = true;
 
+     tsCanvasOut.width = vw;
+       tsCanvasOut.height = vw / vidProp;
+
+       tsCanvasIn.width = vw;
+       tsCanvasIn.height = vw / vidProp;
+
+       tsCanvasFx1.width = vw;
+       tsCanvasFx1.height = vw / vidProp;
+
+       tsCanvasFx2.width = vw;
+       tsCanvasFx2.height = vw / vidProp;
+
    function video2canvas() {
 
 
@@ -173,7 +185,7 @@
                tsContextFx1.drawImage(tsCanvasIn, 0, 0, vw, vw / vidProp);
                tsContextFx1.drawImage(imageObj, 0, 0, vw, vw / vidProp);
            };
-           imageObj.src = "img/fx1_gradient3.png";
+           imageObj.src = "img/200w_d.gif";
        }
        if (CurrentFx == "HueCarnival") {
          

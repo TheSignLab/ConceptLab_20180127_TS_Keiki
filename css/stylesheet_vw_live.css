@@ -31,7 +31,10 @@ video {
 
 /* --------------------------------------------------------- */
 
-.vw-live {
+.vw-live.view-on-top {
+
+    
+    
     display: flex;
     background-color: black;
     flex-direction: column;
