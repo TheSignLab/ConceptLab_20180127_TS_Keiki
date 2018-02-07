@@ -147,7 +147,7 @@
 
 .cover.legal .wrapper .content {
 
-    height: auto;
+    height:400px;
     overflow-y: scroll;
     font-family: font-light;
     color: #5C70FF;

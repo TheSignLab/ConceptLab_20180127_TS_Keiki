@@ -1,52 +1,51 @@
-footer {
+.footer {
     display: none;
+    background-color: #fff;
+    width: 100vw;
+    height: 50px;
 }
 
 
 
-viewButton {
+.viewButton {
     width: 100vw;
-    height: 100px;
+    height: 50px;
     position: absolute;
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
+    float: left;
     bottom: 0px;
     z-index: 10;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
 
-viewButton.main button {
-    width: 33%;
-    height: 90px;
+.viewButton.main .button {
+    width: 30%;
+    height: 50px;
     padding: 0px;
     margin: 5px;
     border: none;
-
-    background-color: white;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
+    background-color: #fff;
     float: left;
 
 }
 
 
-viewButton.main button img {
+.viewButton.main .button img {
     width: 50px;
 }
 
 
-viewButton.fx {
+.viewButton.fx {
     display: flex;
     flex-direction: row;
 }
 
-viewButton.fx button {
+.viewButton.fx .button {
     width: 25%;
-    height: 90px;
+ height: 50px;
     padding: 0px;
     margin: 5px;
     border: none;
@@ -62,17 +61,17 @@ viewButton.fx button {
 }
 
 
-viewButton.fx button img {
+.viewButton.fx .button img {
     width: 50px;
 }
 
 
 
-viewButton.snap{
+.viewButton.snap{
     display: block;
 }
 
-viewButton.snap button {
+.viewButton.snap .button {
     display: inline-block;
     float: left;
     width: 70px;
@@ -87,13 +86,13 @@ viewButton.snap button {
 
 }
 
-viewButton.snap button img {
+.viewButton.snap .button img {
     width: 50px;
     margin: 0 auto;
 }
 
 
-viewButton.snap button.btn-snap-quierosabermas {
+.viewButton.snap .button.btn-snap-quierosabermas {
     display: inline-block;
     float: right;
 
