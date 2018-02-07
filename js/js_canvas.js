@@ -33,17 +33,7 @@
 
    var isPaused = true;
 
-     tsCanvasOut.width = vw;
-       tsCanvasOut.height = vw / vidProp;
 
-       tsCanvasIn.width = vw;
-       tsCanvasIn.height = vw / vidProp;
-
-       tsCanvasFx1.width = vw;
-       tsCanvasFx1.height = vw / vidProp;
-
-       tsCanvasFx2.width = vw;
-       tsCanvasFx2.height = vw / vidProp;
 
    function video2canvas() {
 
@@ -61,69 +51,74 @@
        tsCanvasFx2.width = vw;
        tsCanvasFx2.height = vw / vidProp;
 
+    
+
+           setInterval(function () {
+               if (isPaused) {
+                   vw = $("footer").width();
+                   vh = $("views").height();
+                   vidW = $("video").width();
+                   vidH = $("video").height();
+
+                   vidProp = vidW / vidH;
+                   vProp = vw / vh;
+
+                   sx = 0;
+                   sy = 0;
+                   sw = 0;
+                   sh = 0;
+                   dx = vw;
+                   dy = vh;
+                   dw = vw;
+                   dh = vh;
 
 
-       setInterval(function () {
-           if (isPaused) {
-               vw = $("footer").width();
-               vh = $("views").height();
-               vidW = $("video").width();
-               vidH = $("video").height();
+                   tsContextIn.drawImage(tsVideo, 0, 0, vw, vw / vidProp);
 
-               vidProp = vidW / vidH;
-               vProp = vw / vh;
+                   tsCanvasFx1 = applyFx1(CurrentFx, tsCanvasIn, tsContextFx1);
+                   tsContextFx1 = tsCanvasFx1.getContext('2d');
 
-               sx = 0;
-               sy = 0;
-               sw = 0;
-               sh = 0;
-               dx = vw;
-               dy = vh;
-               dw = vw;
-               dh = vh;
+                   tsCanvasFx2 = applyFx2(CurrentFx, tsCanvasFx1, tsContextFx2);
+                   tsContextFx2 = tsCanvasFx2.getContext('2d');
 
 
-               tsContextIn.drawImage(tsVideo, 0, 0, vw, vw / vidProp);
+                   tsContextOut.drawImage(tsCanvasFx2, 0, 0, vw, vw / vidProp);
 
-               tsCanvasFx1 = applyFx1(CurrentFx, tsCanvasIn, tsContextFx1);
-               tsContextFx1 = tsCanvasFx1.getContext('2d');
+                   /*
+                              tsContextFx1.drawImage(tsCanvasIn,0,0,sx,sy,sw,sh,dx, dy, dw,dh)
 
-               tsCanvasFx2 = applyFx2(CurrentFx, tsCanvasFx1, tsContextFx2);
-               tsContextFx2 = tsCanvasFx2.getContext('2d');
+                              tsCanvasFx1 = applyFx1(CurrentFx, tsCanvasIn);
+                              tsContextFx1 = tsCanvasFx1.getContext('2d');
 
+                              tsContextFx2.drawImage(tsCanvasIn,0,0,sx,sy,sw,sh,dx, dy, dw,dh)
 
-               tsContextOut.drawImage(tsCanvasFx2, 0, 0, vw, vw / vidProp);
-
-               /*
-                          tsContextFx1.drawImage(tsCanvasIn,0,0,sx,sy,sw,sh,dx, dy, dw,dh)
-
-                          tsCanvasFx1 = applyFx1(CurrentFx, tsCanvasIn);
-                          tsContextFx1 = tsCanvasFx1.getContext('2d');
-
-                          tsContextFx2.drawImage(tsCanvasIn,0,0,sx,sy,sw,sh,dx, dy, dw,dh)
-
-                          tsCanvasFx2 = applyFx2(CurrentFx, tsCanvasIn);
-                          tsContextFx2 = tsCanvasFx2.getContext('2d');
-
-
-
-                          tsCanvasFx2Masked = masked(tsCanvasFx2);
-                          tsContextFx2Masked = tsCanvasFx2Masked.getContext('2d');
+                              tsCanvasFx2 = applyFx2(CurrentFx, tsCanvasIn);
+                              tsContextFx2 = tsCanvasFx2.getContext('2d');
 
 
 
-
-                          tsCanvasMerged = merged(tsCanvasFx1, tsCanvasFx2Masked);
-                          tsContextMerged = tsCanvasMerged.getContext('2d');
-
+                              tsCanvasFx2Masked = masked(tsCanvasFx2);
+                              tsContextFx2Masked = tsCanvasFx2Masked.getContext('2d');
 
 
-                          tsContextOut.drawImage(tsCanvasMerged,0,0,sx,sy,sw,sh,dx, dy, dw,dh)
 
 
-               */
-           }
-       }, 0);
+                              tsCanvasMerged = merged(tsCanvasFx1, tsCanvasFx2Masked);
+                              tsContextMerged = tsCanvasMerged.getContext('2d');
+
+
+
+                              tsContextOut.drawImage(tsCanvasMerged,0,0,sx,sy,sw,sh,dx, dy, dw,dh)
+
+
+                   */
+               }
+           }, 0);
+
+
+
+
+
 
 
 
@@ -140,7 +135,7 @@
        } else {
            toogleColorized = true;
        }
-       
+
    }, 13)
 
 
@@ -150,27 +145,27 @@
 
 
        if (CurrentFx == "Default") {
-          imageObj.src = "img/fx1_gradient1.png";
+           imageObj.src = "img/fx1_gradient1.png";
            imageObj.onload = function () {
-                tsContextFx1.globalCompositeOperation = "xor";
+               tsContextFx1.globalCompositeOperation = "xor";
                tsContextFx1.drawImage(tsCanvasIn, 0, 0, vw, vw / vidProp);
                tsContextFx1.drawImage(imageObj, 0, 0, vw, vw / vidProp);
            };
-           
+
        }
        if (CurrentFx == "ColorizedParty") {
-         
+
            if (toogleColorized == true) {
                imageObj.src = "img/fx1_gradient2_b.png";
                imageObj.onload = function () {
-                     tsContextFx1.globalCompositeOperation = "xor";
+                   tsContextFx1.globalCompositeOperation = "xor";
                    tsContextFx1.drawImage(tsCanvasIn, 0, 0, vw, vw / vidProp);
                    tsContextFx1.drawImage(imageObj, 0, 0, vw, vw / vidProp);
                };
            } else {
                imageObj.src = "img/fx1_gradient2_a.png";
                imageObj.onload = function () {
-                     tsContextFx1.globalCompositeOperation = "xor";
+                   tsContextFx1.globalCompositeOperation = "xor";
                    tsContextFx1.drawImage(tsCanvasIn, 0, 0, vw, vw / vidProp);
                    tsContextFx1.drawImage(imageObj, 0, 0, vw, vw / vidProp);
                };
@@ -179,18 +174,18 @@
 
        }
        if (CurrentFx == "TVNoise") {
-          
+
            imageObj.onload = function () {
-                tsContextFx1.globalCompositeOperation = "xor";
+               tsContextFx1.globalCompositeOperation = "xor";
                tsContextFx1.drawImage(tsCanvasIn, 0, 0, vw, vw / vidProp);
                tsContextFx1.drawImage(imageObj, 0, 0, vw, vw / vidProp);
            };
            imageObj.src = "img/200w_d.gif";
        }
        if (CurrentFx == "HueCarnival") {
-         
+
            imageObj.onload = function () {
-                 tsContextFx1.globalCompositeOperation = "xor";
+               tsContextFx1.globalCompositeOperation = "xor";
                tsContextFx1.drawImage(tsCanvasIn, 0, 0, vw, vw / vidProp);
                tsContextFx1.drawImage(imageObj, 0, 0, vw, vw / vidProp);
            };

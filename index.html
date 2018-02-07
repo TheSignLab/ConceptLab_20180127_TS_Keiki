@@ -173,9 +173,9 @@
     </footer>
     <footer>
         <viewButton class="snap">
-            <button onclick="animButton(this)"><img src="img/btn_down-01.png">GUARDAR</button>
+            <button onclick="animButton(this);" ><a id="downCanvas"><img src="img/btn_down-01.png">GUARDAR</button>
             <div class="vb"></div>
-            <button onclick="animButton(this)"><img src="img/btn_share-01.png"><span>COMPARTIR</span></button>
+            <button onclick="animButton(this);uploadPic2Server()"><img src="img/btn_share-01.png"><span>COMPARTIR</span></button>
             <button onclick="animButton(this);ctrlSeemore();" class="btn-snap-quierosabermas"><span>QUIERO SABER MAS</span></button>
         </viewButton>
     </footer>
@@ -192,6 +192,8 @@
         <canvas id="cnFX2Masked"></canvas>
         <canvas id="cnMerged"></canvas>
         <img src="img/fx_mask.png">
+         <img id="canvasImg" alt="Right click to save me!">
+        <form id="apiForm"></form>
     </backend>
 
 </body>
@@ -224,6 +226,7 @@
 <script src="js/jquery.path.js"></script>
 
 <script src="js/js_canvas_mask.js"></script>
+<script src="js/js_api.js"></script>
 <script src="js/js_fx.js"></script>
 <script src="js/js_canvas.js"></script>
 <script src="js/js_ui_ux.js"></script>

@@ -14,50 +14,34 @@
 //  Cam or Video File on canIn
 // ---------------------------- //
 var videoElement = document.querySelector('video');
-var onFailSoHard = function (e) {
-    console.log('Reeeejected!', e);
-    videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
 
-    videoElement.load();
-    videoElement.addEventListener('loadeddata', function () {
-        videoElement.play();
-        video2canvas();
-    }, false);
-};
-
-
+var constraints = {
+    audio: false,
+    video: {
+        facingMode: 'user'
+    }
+}
 
 if (navigator.getUserMedia) {
-    try {
-        navigator.getUserMedia({
-            video: true
-        }, function (stream) {
-            videoElement.src = window.URL.createObjectURL(stream);
-            videoElement.srcObject = stream;
-            videoElement.load();
-            videoElement.addEventListener('loadeddata', function () {
-                videoElement.play();
-                video2canvas();
-                
-            }, false);
-        }, onFailSoHard);
-    } catch (e) {
-        alert(e.message)
-        alert("Error")
-    }
-} else if (navigator.webkitGetUserMedia) {
-    navigator.webkitGetUserMedia('video', function (stream) {
-        videoElement.src = window.webkitURL.createObjectURL(stream);
+    navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
+        videoElement.src = window.URL.createObjectURL(stream);
+        videoElement.srcObject = stream;
         videoElement.load();
         videoElement.addEventListener('loadeddata', function () {
             videoElement.play();
             video2canvas();
         }, false);
-    }, onFailSoHard);
+    });
 } else {
     videoElement.src = 'video/ts-video-sample.mp4'; // fallback.
-
+    videoElement.load();
+    videoElement.addEventListener('loadeddata', function () {
+        videoElement.play();
+        video2canvas();
+    }, false);
 }
+
+
 
 video2canvas()
 

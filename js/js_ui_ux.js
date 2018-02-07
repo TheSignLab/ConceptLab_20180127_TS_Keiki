@@ -69,3 +69,16 @@ function updateFx(n) {
         document.querySelector("viewButton.snap").parentElement.style.display = "none";
     }, 200);
 }
+
+
+
+function downloadCanvas(link, canvasId, filename) {
+    link.href = tsCanvasOut.toDataURL();
+    link.download = filename;
+}
+document.getElementById('downCanvas').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'test.png');
+}, false);
+
+
+
